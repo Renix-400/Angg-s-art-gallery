@@ -1,0 +1,239 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  box-sizing: border-box;
+  height: 100%;
+}
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+.background {
+  min-height: 100%;
+  min-height: 100%;
+  object-fit: cover;
+}
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 1;
+  font-family: Arial, sans-serif;
+}
+.content h1 {
+  font-size: 60px;
+  color: #fff;
+  font-weight: 600;
+  transition: 0.5s;
+}
+.content h1:hover {
+  -webkit-text-stroke: 2px #fff;
+  color: transparent;
+}
+.art-banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  margin: 20px auto;
+  width: fit-content;
+  background: linear-gradient(
+    90deg,
+    #003366,
+    #4b4b4b,
+    #6a5acd
+  ); /* Gradient in green, blue, and purple */
+  border-radius: 30px; /* Rounded corners */
+  color: rgb(238, 231, 231); /* White text */
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.art-banner p {
+  margin: 0;
+}
+
+.art-banner a {
+  color: rgb(245, 237, 237);
+  text-decoration: none;
+  font-weight: bold;
+  padding-left: 5px;
+}
+
+.art-banner a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #121212; /* Dark background for dark mode */
+  color: #e0e0e0; /* Light text color */
+  overflow-x: hidden; /* Prevent horizontal scroll when the menu is open */
+}
+
+.menu-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: #2122247a; /* Midnight Blue */
+  color: #e0e0e0;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 12px;
+  transition: background-color 0.3s;
+}
+
+.sidebar {
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  top: 0;
+  left: -250px; /* Initially hide the sidebar off-screen */
+  background-color: rgba(
+    18,
+    18,
+    19,
+    0.952
+  ); /* Midnight Blue with 80% opacity */
+  transition: 0.3s; /* Smooth slide effect */
+  padding: 20px;
+}
+
+.sidebar.open {
+  left: 0; /* Slide in from the left */
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu li {
+  margin: 15px 0;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #e0e0e0; /* Light text color */
+  font-size: 18px;
+  display: block;
+  transition: color 0.3s;
+  text-align: center;
+}
+
+.menu a:hover {
+  color: #6a5acd; /* Slate Blue for hover effect */
+}
+/* Container for social media links */
+.social-media {
+  display: flex;
+  justify-content: center; /* Center the links horizontally */
+  padding: 20px;
+  border-top: 2px solid #494380; /* Light border on top */
+  background-color: #1e1e1e; /* Dark background for contrast */
+}
+
+.social-media {
+  position: fixed; /* Fixes the container to the viewport */
+  bottom: 0; /* Aligns it to the bottom of the page */
+  left: 0; /* Aligns it to the left of the page */
+  width: 100%; /* Makes the container full-width */
+  display: flex;
+  justify-content: center; /* Centers the links horizontally */
+  padding: 20px 0; /* Adds vertical padding */
+  border-top: 2px solid #e0e0e0; /* Light border on top */
+  background-color: #1e1e1e; /* Dark background for contrast */
+}
+
+/* Social media links styling */
+.social-media a {
+  color: #e0e0e0; /* Light color for text/icons */
+  margin: 0 10px; /* Space between icons */
+  font-size: 24px; /* Adjust size for icons */
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.social-media a:hover {
+  color: #6a5acd; /* Highlight color on hover */
+}
+.pop-effect {
+  transition: transform 0.3s ease; /* Smooth transition for scaling */
+}
+
+.pop-effect:hover {
+  transform: scale(1.2); /* Scales the element to 120% on hover */
+}
+
+.about-section {
+  max-width: 800px; /* Set a maximum width for the section */
+  margin: 0 auto; /* Center the section */
+  padding: 20px; /* Add padding around the text */
+  color: #ffffff; /* Text color */
+  background-color: #121212b2; /* Background color for contrast */
+  border-radius: 12px;
+}
+
+.about-section p {
+  font-size: 16px; /* Adjust font size */
+  line-height: 1.6; /* Adjust line height for better readability */
+}
+
+/* Animation */
+@keyframes wipeup {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.wipeup {
+  animation: wipeup 0.6s ease-out;
+}
+/* Keyframes for the wipe right animation */
+@keyframes wipeRight {
+  from {
+    transform: translateX(0); /* Start from the left side of the container */
+    opacity: 0; /* Start with the element hidden */
+  }
+  to {
+    transform: translateX(100%); /* End at the original position */
+    opacity: 1; /* End with the element fully visible */
+  }
+}
+
+/* Example usage of the animation on an element */
+.wipe-right {
+  animation: wipeRight 1s ease-out; /* Apply the animation */
+}
+
+@media (min-aspect-ratio: 16/9) {
+  .background {
+    width: 100%;
+    height: auto;
+  }
+}
+@media (max-aspect-ratio: 16/9) {
+  .background {
+    width: auto;
+    height: 100%;
+  }
+}
